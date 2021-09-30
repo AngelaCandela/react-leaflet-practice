@@ -48,6 +48,13 @@ const MapVectorLayers = () => {
     [51.49, -0.08],
     [51.5, -0.06],
   ];
+
+  const fillBlueOptions = { fillColor: 'blue' };
+  const blackOptions = { color: 'black' };
+  const limeOptions = { color: 'lime' };
+  const purpleOptions = { color: 'purple' };
+  const redOptions = { color: 'red' };
+
   return(
     <StyledMapContainer center={center} zoom={13} scrollWheelZoom={false}>
       <TileLayer
