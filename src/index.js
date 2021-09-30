@@ -43,6 +43,10 @@ marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
 circle.bindPopup("I am a circle.");
 polygon.bindPopup("I am a polygon.");
 
+// Creating a popup layer that we'll use in response to an event
+
+var eventPopup = L.popup();
+
 var myOtherMap = L.map('otherMapId').setView([51.505, -0.09], 13);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
