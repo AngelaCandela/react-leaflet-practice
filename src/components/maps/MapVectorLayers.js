@@ -43,6 +43,11 @@ const MapVectorLayers = () => {
       [51.53, -0.07],
     ],
   ];
+
+  const rectangle = [
+    [51.49, -0.08],
+    [51.5, -0.06],
+  ];
   return(
     <StyledMapContainer center={center} zoom={13} scrollWheelZoom={false}>
       <TileLayer
