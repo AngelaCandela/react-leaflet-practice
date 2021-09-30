@@ -18,6 +18,11 @@ const MapEventsFindYourLocation = () => {
       },
     });
 
+    return position === null ? null : (
+      <Marker position={position}>
+        <Popup>You are here</Popup>
+      </Marker>
+    )
   };
 
   return(
