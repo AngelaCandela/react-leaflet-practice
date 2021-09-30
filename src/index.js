@@ -47,6 +47,15 @@ polygon.bindPopup("I am a polygon.");
 
 var eventPopup = L.popup();
 
+// Defining an event listener function
+
+function onMapClick(e) {
+    eventPopup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(myMap);
+}
+
 var myOtherMap = L.map('otherMapId').setView([51.505, -0.09], 13);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
