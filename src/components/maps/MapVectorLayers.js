@@ -1,5 +1,5 @@
 import 'leaflet/dist/leaflet.css';
-import { TileLayer, Marker, Popup, Circle, CircleMarker } from 'react-leaflet';
+import { TileLayer, Marker, Popup, Circle, CircleMarker, Polyline } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapVectorLayers = () => {
@@ -65,6 +65,8 @@ const MapVectorLayers = () => {
       <CircleMarker center={[51.51, -0.12]} pathOptions={redOptions} radius={20}>
         <Popup>Popup in CircleMarker</Popup>
       </CircleMarker>
+      <Polyline pathOptions={redOptions} positions={polyline} />
+      <Polyline pathOptions={limeOptions} positions={multiPolyline} />
     </StyledMapContainer>
   )
 };
