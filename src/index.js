@@ -30,6 +30,13 @@ var circle = L.circle([51.508, -0.11], {
     fillOpacity: 0.5,
     radius: 500
 }).addTo(myMap);
+
+var polygon = L.polygon([
+    [51.509, -0.08],
+    [51.503, -0.06],
+    [51.51, -0.047]
+]).addTo(myMap);
+
 var myOtherMap = L.map('otherMapId').setView([51.505, -0.09], 13);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
