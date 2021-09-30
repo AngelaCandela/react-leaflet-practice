@@ -22,6 +22,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoiYW5nZWxhY2FuZGVsYSIsImEiOiJja3U2cjllMTUzdm4zMnJxdGI4Zm10cHpiIn0.T0libTGY0nQcbu6gGP4caA'
 }).addTo(myMap);
 
+var marker = L.marker([51.5, -0.09]).addTo(myMap);
 var myOtherMap = L.map('otherMapId').setView([51.505, -0.09], 13);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
