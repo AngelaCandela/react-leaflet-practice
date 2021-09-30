@@ -24,6 +24,12 @@ const MapVectorLayers = () => {
       [51.52, -0.06],
     ],
   ];
+
+  const polygon = [
+    [51.515, -0.09],
+    [51.52, -0.1],
+    [51.52, -0.12],
+  ];
   return(
     <StyledMapContainer center={center} zoom={13} scrollWheelZoom={false}>
       <TileLayer
