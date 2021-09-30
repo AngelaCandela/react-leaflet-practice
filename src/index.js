@@ -53,3 +53,10 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     zoomOffset: -1,
     accessToken: 'pk.eyJ1IjoiYW5nZWxhY2FuZGVsYSIsImEiOiJja3U2cjllMTUzdm4zMnJxdGI4Zm10cHpiIn0.T0libTGY0nQcbu6gGP4caA'
 }).addTo(myOtherMap);
+
+// Using popups as layers
+
+var popup = L.popup()
+    .setLatLng([51.5, -0.09])
+    .setContent("I am a standalone popup.")
+    .openOn(myOtherMap);
