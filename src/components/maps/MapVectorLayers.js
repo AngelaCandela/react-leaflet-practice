@@ -3,6 +3,8 @@ import { TileLayer, Marker, Popup } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapVectorLayers = () => {
+  
+  const center = [51.505, -0.09];
   return(
     <StyledMapContainer center={center} zoom={13} scrollWheelZoom={false}>
       <TileLayer
