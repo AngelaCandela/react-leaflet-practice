@@ -1,6 +1,7 @@
 import './App.css';
 import MapPopupWithMarker from './components/maps/MapPopupWithMarker';
 import MapEventsFindYourLocation from './components/maps/MapEventsFindYourLocation';
+import MapVectorLayers from './components/maps/MapVectorLayers';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <div id="otherMapId"></div>
       <MapPopupWithMarker />
       <MapEventsFindYourLocation />
+      <MapVectorLayers />
     </>
   );
 }
