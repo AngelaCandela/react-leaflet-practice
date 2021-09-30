@@ -37,4 +37,11 @@
   }
 }
 
-#mapid { height: 180px; }
+#mapId {
+  height: 180px;
+  margin-bottom: 50px;
+}
+
+#otherMapId {
+  height: 180px;
+}

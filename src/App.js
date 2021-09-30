@@ -2,7 +2,10 @@ import './App.css';
 
 function App() {
   return (
-    <div id="mapid"></div>
+    <>
+      <div id="mapId"></div>
+      <div id="otherMapId"></div>
+    </>
   );
 }
 
