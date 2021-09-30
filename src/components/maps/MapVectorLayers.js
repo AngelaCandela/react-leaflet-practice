@@ -1,5 +1,5 @@
 import 'leaflet/dist/leaflet.css';
-import { TileLayer, Marker, Popup } from 'react-leaflet';
+import { TileLayer, Marker, Popup, Circle } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapVectorLayers = () => {
@@ -61,6 +61,7 @@ const MapVectorLayers = () => {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
+      <Circle center={center} pathOptions={fillBlueOptions} radius={200} />
     </StyledMapContainer>
   )
 };
