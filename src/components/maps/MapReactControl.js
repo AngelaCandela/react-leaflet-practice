@@ -6,6 +6,7 @@ const MapReactControl = () => {
 
   const MinimapControl = ({ position, zoom }) => {
     const parentMap = useMap();
+    const mapZoom = zoom || 0;
     return (
     )
   };
