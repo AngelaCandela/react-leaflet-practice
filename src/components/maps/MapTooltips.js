@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import 'leaflet/dist/leaflet.css';
 import { TileLayer, Marker, CircleMarker, Rectangle, Polygon, Popup, Tooltip } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
@@ -27,6 +27,15 @@ const MapTooltips = () => {
 
   const TooltipCircle = () => {
     const [clickedCount, setClickedCount] = useState(0);
+    const eventHandlers = useMemo(
+      () => ({
+        click() {
+          setClickedCount((count) => count + 1)
+        },
+      }),
+      [],
+    );
+
     return (
     )
   };
