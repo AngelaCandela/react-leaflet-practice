@@ -1,5 +1,5 @@
 import 'leaflet/dist/leaflet.css';
-import { LayersControl, TileLayer } from 'react-leaflet';
+import { LayersControl, TileLayer, Marker, Popup } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapLayersControl = () => {
@@ -21,6 +21,13 @@ const MapLayersControl = () => {
             url="https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png"
           />
         </LayersControl.BaseLayer>
+        <LayersControl.Overlay name="Marker with popup">
+          <Marker position={center}>
+            <Popup>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </Popup>
+          </Marker>
+        </LayersControl.Overlay>
       </LayersControl>
     </StyledMapContainer>
   )
