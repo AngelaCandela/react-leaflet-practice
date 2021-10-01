@@ -58,6 +58,7 @@ const MapTooltips = () => {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
+      <TooltipCircle />
       <CircleMarker
         center={[51.51, -0.12]}
         pathOptions={{ color: 'red' }}
