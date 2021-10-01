@@ -6,6 +6,7 @@ import StyledMapContainer from '../mapContainers/StyledMapContainer';
 const MapReactControl = () => {
 
   const MinimapBounds = ({ parentMap, zoom }) => {
+    const minimap = useMap();
   };
 
   const MinimapControl = ({ position, zoom }) => {
