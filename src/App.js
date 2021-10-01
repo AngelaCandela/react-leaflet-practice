@@ -5,6 +5,7 @@ import MapVectorLayers from './components/maps/MapVectorLayers';
 import MapSVGOverlay from './components/maps/MapSVGOverlay';
 import MapOtherLayers from './components/maps/MapOtherLayers';
 import MapTooltips from './components/maps/MapTooltips';
+import MapLayersControl from './components/maps/MapLayersControl';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <MapSVGOverlay />
       <MapOtherLayers />
       <MapTooltips />
+      <MapLayersControl />
     </>
   );
 }
