@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import 'leaflet/dist/leaflet.css';
 import { TileLayer } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
@@ -10,6 +11,7 @@ const MapPanes = () => {
   ];
 
   const BlinkingPane = () => {
+    const [render, setRender] = useState(true);
   };
 
   return(
