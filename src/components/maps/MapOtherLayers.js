@@ -1,5 +1,5 @@
 import 'leaflet/dist/leaflet.css';
-import { TileLayer } from 'react-leaflet';
+import { TileLayer, LayerGroup } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapOtherLayers = () => {
@@ -17,7 +17,8 @@ const MapOtherLayers = () => {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-
+      <LayerGroup>
+      </LayerGroup>
     </StyledMapContainer>
   );
 };
