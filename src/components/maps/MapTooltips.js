@@ -47,6 +47,7 @@ const MapTooltips = () => {
         eventHandlers={eventHandlers}
         pathOptions={{ fillColor: 'blue' }}
         radius={200}>
+        <Tooltip>{clickedText}</Tooltip>
       </Circle>
     )
   };
