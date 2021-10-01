@@ -15,6 +15,9 @@ const MapViewBounds = () => {
     [52.505, 29.09],
   ];
 
+  const redColor = { color: 'red' };
+  const whiteColor = { color: 'white' };
+
   const SetBoundsRectangles = () => {
     const [bounds, setBounds] = useState(outerBounds);
     const map = useMap();
