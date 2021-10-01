@@ -10,6 +10,11 @@ const MapPanes = () => {
     [52.505, 29.09],
   ];
 
+  const inner = [
+    [49.505, -2.09],
+    [53.505, 2.09],
+  ];
+
   const BlinkingPane = () => {
     const [render, setRender] = useState(true);
     const timerRef = useRef();
