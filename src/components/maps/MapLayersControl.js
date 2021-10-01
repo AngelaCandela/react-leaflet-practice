@@ -6,6 +6,11 @@ const MapLayersControl = () => {
 
   const center = [51.505, -0.09];
 
+  const rectangle = [
+    [51.49, -0.08],
+    [51.5, -0.06],
+  ];
+
   return(
     <StyledMapContainer center={center} zoom={13} scrollWheelZoom={false}>
       <LayersControl position="topright">
