@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import 'leaflet/dist/leaflet.css';
 import { TileLayer } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
@@ -13,6 +13,15 @@ const MapPanes = () => {
   const BlinkingPane = () => {
     const [render, setRender] = useState(true);
     const timerRef = useRef();
+
+    useEffect(() => {
+      timerRef.current = setInterval(() => {
+        setRender((r) => !r)
+      }, 5000)
+      return () => {
+        clearInterval(timerRef.current)
+      }
+    }, []);
   };
 
   return(
