@@ -44,6 +44,9 @@ const MapTooltips = () => {
         <Tooltip sticky>sticky Tooltip for Polygon</Tooltip>
       </Polygon>
       <Rectangle bounds={rectangle} pathOptions={{ color: 'black' }}>
+        <Tooltip direction="bottom" offset={[0, 20]} opacity={1} permanent>
+          permanent Tooltip for Rectangle
+        </Tooltip>
       </Rectangle>
     </StyledMapContainer>
   )
