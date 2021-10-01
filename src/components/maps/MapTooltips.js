@@ -1,5 +1,5 @@
 import 'leaflet/dist/leaflet.css';
-import { TileLayer, CircleMarker, Tooltip } from 'react-leaflet';
+import { TileLayer, Marker, CircleMarker, Tooltip } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapTooltips = () => {
@@ -18,6 +18,8 @@ const MapTooltips = () => {
         radius={20}>
         <Tooltip>Tooltip for CircleMarker</Tooltip>
       </CircleMarker>
+      <Marker position={[51.51, -0.09]}>
+      </Marker>
     </StyledMapContainer>
   )
 };
