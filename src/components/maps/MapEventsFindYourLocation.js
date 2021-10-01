@@ -26,12 +26,15 @@ const MapEventsFindYourLocation = () => {
   };
 
   return(
+    <>
+    <h3>Map Events Find Your Location</h3>
     <StyledMapContainer center={{ lat: 51.505, lng: -0.09 }} zoom={13} scrollWheelZoom={false}>
       <TileLayer attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <LocationMarker />
     </StyledMapContainer>
+    </>
   )
 };
 

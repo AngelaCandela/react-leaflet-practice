@@ -53,6 +53,8 @@ const MapTooltips = () => {
   };
 
   return(
+    <>
+    <h3>Map Tooltips</h3>
     <StyledMapContainer center={center} zoom={13} scrollWheelZoom={false}>
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -78,6 +80,7 @@ const MapTooltips = () => {
         </Tooltip>
       </Rectangle>
     </StyledMapContainer>
+    </>
   )
 };
 

@@ -17,6 +17,8 @@ const MapOtherLayers = () => {
   const purpleOptions = { color: 'purple' };
 
   return (
+    <>
+    <h3>Map Other Layers</h3>
     <StyledMapContainer center={center} zoom={13} scrollWheelZoom={false}>
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -44,6 +46,7 @@ const MapOtherLayers = () => {
         <Rectangle bounds={rectangle} />
       </FeatureGroup>
     </StyledMapContainer>
+    </>
   );
 };
 

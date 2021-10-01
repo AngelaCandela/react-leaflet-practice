@@ -12,6 +12,8 @@ const MapLayersControl = () => {
   ];
 
   return(
+    <>
+    <h3>Map Layers Control</h3>
     <StyledMapContainer center={center} zoom={13} scrollWheelZoom={false}>
       <LayersControl position="topright">
         <LayersControl.BaseLayer checked name="OpenStreetMap.Mapnik">
@@ -64,6 +66,7 @@ const MapLayersControl = () => {
         </LayersControl.Overlay>
       </LayersControl>
     </StyledMapContainer>
+    </>
   )
 };
 
