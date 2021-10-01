@@ -53,6 +53,7 @@ const MapReactControl = () => {
           attributionControl={false}
           zoomControl={false}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+          <MinimapBounds parentMap={parentMap} zoom={mapZoom} />
         </MapContainer>
       ),
       [],
