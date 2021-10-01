@@ -1,12 +1,22 @@
-import { useMemo } from 'react';
+import { useMemo, useCallback } from 'react';
 import 'leaflet/dist/leaflet.css';
-import { MapContainer, TileLayer, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, useMap, useMapEvent } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapReactControl = () => {
 
   const MinimapBounds = ({ parentMap, zoom }) => {
     const minimap = useMap();
+
+    // Clicking a point on the minimap sets the parent's map center
+    const onClick = useCallback(
+      (e) => {
+        parentMap.setView(e.latlng, parentMap.getZoom())
+      },
+      [parentMap],
+    );
+
+    useMapEvent('click', onClick);
   };
 
   const MinimapControl = ({ position, zoom }) => {
