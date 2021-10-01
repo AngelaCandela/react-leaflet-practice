@@ -1,5 +1,5 @@
 import 'leaflet/dist/leaflet.css';
-import { TileLayer, Marker, CircleMarker, Popup, Tooltip } from 'react-leaflet';
+import { TileLayer, Marker, CircleMarker, Polygon, Popup, Tooltip } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapTooltips = () => {
@@ -35,6 +35,8 @@ const MapTooltips = () => {
         <Popup>Popup for Marker</Popup>
         <Tooltip>Tooltip for Marker</Tooltip>
       </Marker>
+      <Polygon pathOptions={{ color: 'purple' }} positions={multiPolygon}>
+      </Polygon>
     </StyledMapContainer>
   )
 };
