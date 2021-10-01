@@ -3,6 +3,7 @@ import MapPopupWithMarker from './components/maps/MapPopupWithMarker';
 import MapEventsFindYourLocation from './components/maps/MapEventsFindYourLocation';
 import MapVectorLayers from './components/maps/MapVectorLayers';
 import MapSVGOverlay from './components/maps/MapSVGOverlay';
+import MapOtherLayers from './components/maps/MapOtherLayers';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <MapEventsFindYourLocation />
       <MapVectorLayers />
       <MapSVGOverlay />
+      <MapOtherLayers />
     </>
   );
 }
