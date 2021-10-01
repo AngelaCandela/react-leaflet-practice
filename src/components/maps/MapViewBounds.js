@@ -58,6 +58,8 @@ const MapViewBounds = () => {
   }
 
   return(
+    <>
+    <h3>Map View Bounds</h3>
     <StyledMapContainer bounds={outerBounds} scrollWheelZoom={false}>
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -65,6 +67,7 @@ const MapViewBounds = () => {
       />
       <SetBoundsRectangles />
     </StyledMapContainer>
+    </>
   )
 };
 
