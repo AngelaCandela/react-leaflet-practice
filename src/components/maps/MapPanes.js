@@ -9,6 +9,9 @@ const MapPanes = () => {
     [52.505, 29.09],
   ];
 
+  const BlinkingPane = () => {
+  };
+
   return(
     <>
     <h3>Map Panes</h3>
