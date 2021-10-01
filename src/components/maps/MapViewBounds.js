@@ -14,6 +14,9 @@ const MapViewBounds = () => {
     [52.505, 29.09],
   ];
 
+  const SetBoundsRectangles = () => {
+  }
+
   return(
     <StyledMapContainer bounds={outerBounds} scrollWheelZoom={false}>
       <TileLayer
