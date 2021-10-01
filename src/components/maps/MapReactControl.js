@@ -1,10 +1,11 @@
 import 'leaflet/dist/leaflet.css';
-import { TileLayer } from 'react-leaflet';
+import { TileLayer, useMap } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapReactControl = () => {
 
   const MinimapControl = ({ position, zoom }) => {
+    const parentMap = useMap();
     return (
     )
   };
