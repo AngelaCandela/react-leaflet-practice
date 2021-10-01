@@ -6,6 +6,11 @@ const MapOtherLayers = () => {
 
   const center = [51.505, -0.09];
 
+  const fillBlueOptions = { fillColor: 'blue' };
+  const fillRedOptions = { fillColor: 'red' };
+  const greenOptions = { color: 'green', fillColor: 'green' };
+  const purpleOptions = { color: 'purple' };
+
   return (
     <StyledMapContainer center={center} zoom={13} scrollWheelZoom={false}>
       <TileLayer
