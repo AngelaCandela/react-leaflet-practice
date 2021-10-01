@@ -25,6 +25,13 @@ const MapOtherLayers = () => {
           radius={100}
           stroke={false}
         />
+        <LayerGroup>
+          <Circle
+            center={[51.51, -0.08]}
+            pathOptions={greenOptions}
+            radius={100}
+          />
+        </LayerGroup>
       </LayerGroup>
     </StyledMapContainer>
   );
