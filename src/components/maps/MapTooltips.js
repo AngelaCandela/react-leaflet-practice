@@ -20,6 +20,7 @@ const MapTooltips = () => {
       </CircleMarker>
       <Marker position={[51.51, -0.09]}>
         <Popup>Popup for Marker</Popup>
+        <Tooltip>Tooltip for Marker</Tooltip>
       </Marker>
     </StyledMapContainer>
   )
