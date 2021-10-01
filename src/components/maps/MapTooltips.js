@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import 'leaflet/dist/leaflet.css';
-import { TileLayer, Marker, CircleMarker, Rectangle, Polygon, Popup, Tooltip } from 'react-leaflet';
+import { TileLayer, Marker, CircleMarker, Circle, Rectangle, Polygon, Popup, Tooltip } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapTooltips = () => {
@@ -42,6 +42,12 @@ const MapTooltips = () => {
         : `Circle click: ${clickedCount}`;
 
     return (
+      <Circle
+        center={center}
+        eventHandlers={eventHandlers}
+        pathOptions={{ fillColor: 'blue' }}
+        radius={200}>
+      </Circle>
     )
   };
 
