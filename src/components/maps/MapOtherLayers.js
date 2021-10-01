@@ -19,6 +19,12 @@ const MapOtherLayers = () => {
       />
       <LayerGroup>
         <Circle center={center} pathOptions={fillBlueOptions} radius={200} />
+        <Circle
+          center={center}
+          pathOptions={fillRedOptions}
+          radius={100}
+          stroke={false}
+        />
       </LayerGroup>
     </StyledMapContainer>
   );
