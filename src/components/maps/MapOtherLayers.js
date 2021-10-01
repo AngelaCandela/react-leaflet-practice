@@ -6,6 +6,11 @@ const MapOtherLayers = () => {
 
   const center = [51.505, -0.09];
 
+  const rectangle = [
+    [51.49, -0.08],
+    [51.5, -0.06],
+  ];
+
   const fillBlueOptions = { fillColor: 'blue' };
   const fillRedOptions = { fillColor: 'red' };
   const greenOptions = { color: 'green', fillColor: 'green' };
