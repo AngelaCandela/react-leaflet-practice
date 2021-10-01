@@ -44,6 +44,9 @@ const MapPanes = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <BlinkingPane />
+      <Pane name="yellow-rectangle" style={{ zIndex: 499 }}>
+        <Rectangle bounds={inner} pathOptions={{ color: 'yellow' }} />
+      </Pane>
     </StyledMapContainer>
     </>
   )
