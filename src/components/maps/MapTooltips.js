@@ -6,6 +6,19 @@ const MapTooltips = () => {
 
   const center = [51.505, -0.09];
 
+  const multiPolygon = [
+    [
+      [51.51, -0.12],
+      [51.51, -0.13],
+      [51.53, -0.13],
+    ],
+    [
+      [51.51, -0.05],
+      [51.51, -0.07],
+      [51.53, -0.07],
+    ],
+  ];
+
   return(
     <StyledMapContainer center={center} zoom={13} scrollWheelZoom={false}>
       <TileLayer
