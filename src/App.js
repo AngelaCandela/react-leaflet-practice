@@ -4,6 +4,7 @@ import MapEventsFindYourLocation from './components/maps/MapEventsFindYourLocati
 import MapVectorLayers from './components/maps/MapVectorLayers';
 import MapSVGOverlay from './components/maps/MapSVGOverlay';
 import MapOtherLayers from './components/maps/MapOtherLayers';
+import MapTooltips from './components/maps/MapTooltips';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <MapVectorLayers />
       <MapSVGOverlay />
       <MapOtherLayers />
+      <MapTooltips />
     </>
   );
 }
