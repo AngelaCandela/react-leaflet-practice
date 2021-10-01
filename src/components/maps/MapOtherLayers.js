@@ -1,5 +1,5 @@
 import 'leaflet/dist/leaflet.css';
-import { TileLayer, LayerGroup, FeatureGroup, Circle } from 'react-leaflet';
+import { TileLayer, Popup, LayerGroup, FeatureGroup, Circle } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapOtherLayers = () => {
@@ -34,6 +34,7 @@ const MapOtherLayers = () => {
         </LayerGroup>
       </LayerGroup>
       <FeatureGroup pathOptions={purpleOptions}>
+        <Popup>Popup in FeatureGroup</Popup>
       </FeatureGroup>
     </StyledMapContainer>
   );
