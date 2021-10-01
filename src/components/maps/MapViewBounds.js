@@ -40,6 +40,21 @@ const MapViewBounds = () => {
       }),
       [map],
     );
+
+    return (
+      <>
+        <Rectangle
+          bounds={outerBounds}
+          eventHandlers={outerHandlers}
+          pathOptions={bounds === outerBounds ? redColor : whiteColor}
+        />
+        <Rectangle
+          bounds={innerBounds}
+          eventHandlers={innerHandlers}
+          pathOptions={bounds === innerBounds ? redColor : whiteColor}
+        />
+      </>
+    )
   }
 
   return(
