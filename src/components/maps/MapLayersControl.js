@@ -1,5 +1,5 @@
 import 'leaflet/dist/leaflet.css';
-import { LayersControl, TileLayer, Marker, Popup, Circle, LayerGroup } from 'react-leaflet';
+import { LayersControl, TileLayer, Marker, Popup, Circle, Rectangle, LayerGroup, FeatureGroup } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapLayersControl = () => {
@@ -54,6 +54,13 @@ const MapLayersControl = () => {
               />
             </LayerGroup>
           </LayerGroup>
+        </LayersControl.Overlay>
+        <LayersControl.Overlay name="Feature group">
+          <FeatureGroup pathOptions={{ color: 'purple' }}>
+            <Popup>Popup in FeatureGroup</Popup>
+            <Circle center={[51.51, -0.06]} radius={200} />
+            <Rectangle bounds={rectangle} />
+          </FeatureGroup>
         </LayersControl.Overlay>
       </LayersControl>
     </StyledMapContainer>
