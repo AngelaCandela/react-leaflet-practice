@@ -35,6 +35,7 @@ const MapOtherLayers = () => {
       </LayerGroup>
       <FeatureGroup pathOptions={purpleOptions}>
         <Popup>Popup in FeatureGroup</Popup>
+        <Circle center={[51.51, -0.06]} radius={200} />
       </FeatureGroup>
     </StyledMapContainer>
   );
