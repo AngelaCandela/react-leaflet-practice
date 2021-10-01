@@ -1,5 +1,5 @@
 import 'leaflet/dist/leaflet.css';
-import { TileLayer } from 'react-leaflet';
+import { TileLayer, CircleMarker } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapTooltips = () => {
@@ -12,6 +12,11 @@ const MapTooltips = () => {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
+      <CircleMarker
+        center={[51.51, -0.12]}
+        pathOptions={{ color: 'red' }}
+        radius={20}>
+      </CircleMarker>
     </StyledMapContainer>
   )
 };
