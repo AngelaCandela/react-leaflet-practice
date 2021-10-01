@@ -36,6 +36,11 @@ const MapTooltips = () => {
       [],
     );
 
+    const clickedText =
+      clickedCount === 0
+        ? 'Click this Circle to change the Tooltip text'
+        : `Circle click: ${clickedCount}`;
+
     return (
     )
   };
