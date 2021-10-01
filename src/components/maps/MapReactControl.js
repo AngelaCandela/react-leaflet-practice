@@ -6,6 +6,13 @@ import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapReactControl = () => {
 
+  const POSITION_CLASSES = {
+    bottomleft: 'leaflet-bottom leaflet-left',
+    bottomright: 'leaflet-bottom leaflet-right',
+    topleft: 'leaflet-top leaflet-left',
+    topright: 'leaflet-top leaflet-right',
+  };
+
   const BOUNDS_STYLE = { weight: 1 };
 
   const MinimapBounds = ({ parentMap, zoom }) => {
@@ -58,7 +65,13 @@ const MapReactControl = () => {
       ),
       [],
     );
+
+    const positionClass = (position && POSITION_CLASSES[position]) || POSITION_CLASSES.topright;
+
     return (
+      <div className={positionClass}>
+        <div className="leaflet-control leaflet-bar">{minimap}</div>
+      </div>
     )
   };
 
