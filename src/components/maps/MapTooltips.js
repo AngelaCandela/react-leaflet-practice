@@ -24,6 +24,11 @@ const MapTooltips = () => {
     [51.5, -0.06],
   ];
 
+  const TooltipCircle = () => {
+    return (
+    )
+  };
+
   return(
     <StyledMapContainer center={center} zoom={13} scrollWheelZoom={false}>
       <TileLayer
