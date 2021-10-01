@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import 'leaflet/dist/leaflet.css';
-import { TileLayer, useMap } from 'react-leaflet';
+import { TileLayer, Rectangle, useMap } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapViewBounds = () => {
