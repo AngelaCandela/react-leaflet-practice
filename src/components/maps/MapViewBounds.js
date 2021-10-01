@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import 'leaflet/dist/leaflet.css';
 import { TileLayer, useMap } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
@@ -18,6 +18,25 @@ const MapViewBounds = () => {
   const SetBoundsRectangles = () => {
     const [bounds, setBounds] = useState(outerBounds);
     const map = useMap();
+
+    const innerHandlers = useMemo(
+      () => ({
+        click() {
+          setBounds(innerBounds)
+          map.fitBounds(innerBounds)
+        },
+      }),
+      [map],
+    );
+    const outerHandlers = useMemo(
+      () => ({
+        click() {
+          setBounds(outerBounds)
+          map.fitBounds(outerBounds)
+        },
+      }),
+      [map],
+    );
   }
 
   return(
