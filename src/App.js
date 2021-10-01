@@ -7,6 +7,7 @@ import MapOtherLayers from './components/maps/MapOtherLayers';
 import MapTooltips from './components/maps/MapTooltips';
 import MapLayersControl from './components/maps/MapLayersControl';
 import MapPanes from './components/maps/MapPanes';
+import MapViewBounds from './components/maps/MapViewBounds';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <MapTooltips />
       <MapLayersControl />
       <MapPanes />
+      <MapViewBounds />
     </>
   );
 }
