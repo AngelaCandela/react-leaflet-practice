@@ -20,6 +20,11 @@ const MapReactControl = () => {
 
     // Keep track of bounds in state to trigger renders
     const [bounds, setBounds] = useState(parentMap.getBounds());
+    const onChange = useCallback(() => {
+      setBounds(parentMap.getBounds())
+      // Update the minimap's view to match the parent map's center and zoom
+      minimap.setView(parentMap.getCenter(), zoom)
+    }, [minimap, parentMap, zoom]);
   };
 
   const MinimapControl = ({ position, zoom }) => {
