@@ -47,6 +47,9 @@ const MapPanes = () => {
       <Pane name="yellow-rectangle" style={{ zIndex: 499 }}>
         <Rectangle bounds={inner} pathOptions={{ color: 'yellow' }} />
       </Pane>
+      <Pane name="purple-rectangle" style={{ zIndex: 499 }}>
+        <Rectangle bounds={outer} pathOptions={{ color: 'purple' }} />
+      </Pane>
     </StyledMapContainer>
     </>
   )
