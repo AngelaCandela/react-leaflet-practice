@@ -1,6 +1,7 @@
 import { useState, useMemo, useCallback } from 'react';
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, useMap, useMapEvent } from 'react-leaflet';
+import { useEventHandlers } from '@react-leaflet/core';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapReactControl = () => {
@@ -25,6 +26,10 @@ const MapReactControl = () => {
       // Update the minimap's view to match the parent map's center and zoom
       minimap.setView(parentMap.getCenter(), zoom)
     }, [minimap, parentMap, zoom]);
+
+    // Listen to events on the parent map
+    const handlers = useMemo(() => ({ move: onChange, zoom: onChange }), []);
+    useEventHandlers({ instance: parentMap }, handlers);
   };
 
   const MinimapControl = ({ position, zoom }) => {
