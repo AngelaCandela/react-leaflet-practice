@@ -1,4 +1,4 @@
-import { useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, useMap, useMapEvent } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
@@ -17,6 +17,9 @@ const MapReactControl = () => {
     );
 
     useMapEvent('click', onClick);
+
+    // Keep track of bounds in state to trigger renders
+    const [bounds, setBounds] = useState(parentMap.getBounds());
   };
 
   const MinimapControl = ({ position, zoom }) => {
