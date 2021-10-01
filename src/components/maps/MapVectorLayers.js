@@ -1,5 +1,5 @@
 import 'leaflet/dist/leaflet.css';
-import { TileLayer, Marker, Popup, Circle, CircleMarker, Polyline, Polygon, Rectangle } from 'react-leaflet';
+import { TileLayer, Popup, Circle, CircleMarker, Polyline, Polygon, Rectangle } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapVectorLayers = () => {
