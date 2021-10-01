@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import 'leaflet/dist/leaflet.css';
-import { TileLayer } from 'react-leaflet';
+import { TileLayer, Pane, Rectangle } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapPanes = () => {
@@ -22,6 +22,12 @@ const MapPanes = () => {
         clearInterval(timerRef.current)
       }
     }, []);
+
+    return render ? (
+      <Pane name="cyan-rectangle" style={{ zIndex: 500 }}>
+        <Rectangle bounds={outer} pathOptions={{ color: 'cyan' }} />
+      </Pane>
+    ) : null
   };
 
   return(
