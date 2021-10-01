@@ -36,6 +36,7 @@ const MapTooltips = () => {
         <Tooltip>Tooltip for Marker</Tooltip>
       </Marker>
       <Polygon pathOptions={{ color: 'purple' }} positions={multiPolygon}>
+        <Tooltip sticky>sticky Tooltip for Polygon</Tooltip>
       </Polygon>
     </StyledMapContainer>
   )
