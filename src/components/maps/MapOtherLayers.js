@@ -1,5 +1,5 @@
 import 'leaflet/dist/leaflet.css';
-import { TileLayer, LayerGroup } from 'react-leaflet';
+import { TileLayer, LayerGroup, Circle } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapOtherLayers = () => {
@@ -18,6 +18,7 @@ const MapOtherLayers = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <LayerGroup>
+        <Circle center={center} pathOptions={fillBlueOptions} radius={200} />
       </LayerGroup>
     </StyledMapContainer>
   );
