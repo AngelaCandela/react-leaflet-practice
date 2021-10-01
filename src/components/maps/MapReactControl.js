@@ -3,6 +3,12 @@ import { TileLayer } from 'react-leaflet';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapReactControl = () => {
+
+  const MinimapControl = ({ position, zoom }) => {
+    return (
+    )
+  };
+
   return(
     <>
     <h3>Map React Control</h3>
