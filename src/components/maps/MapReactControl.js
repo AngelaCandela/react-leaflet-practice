@@ -1,10 +1,12 @@
 import { useState, useMemo, useCallback } from 'react';
 import 'leaflet/dist/leaflet.css';
-import { MapContainer, TileLayer, useMap, useMapEvent } from 'react-leaflet';
+import { MapContainer, TileLayer, Rectangle, useMap, useMapEvent } from 'react-leaflet';
 import { useEventHandlers } from '@react-leaflet/core';
 import StyledMapContainer from '../mapContainers/StyledMapContainer';
 
 const MapReactControl = () => {
+
+  const BOUNDS_STYLE = { weight: 1 };
 
   const MinimapBounds = ({ parentMap, zoom }) => {
     const minimap = useMap();
@@ -30,6 +32,8 @@ const MapReactControl = () => {
     // Listen to events on the parent map
     const handlers = useMemo(() => ({ move: onChange, zoom: onChange }), []);
     useEventHandlers({ instance: parentMap }, handlers);
+
+    return <Rectangle bounds={bounds} pathOptions={BOUNDS_STYLE} />
   };
 
   const MinimapControl = ({ position, zoom }) => {
